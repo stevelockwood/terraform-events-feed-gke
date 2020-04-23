@@ -1,0 +1,13 @@
+# Open terraform.tfvars file and change project_id variable
+# and the docker image names as needed
+
+# Run this first
+terraform init
+
+terrafom plan
+
+# Create everything
+terraform apply -auto-approve
+
+# Delete everything
+terraform destroy -auto-approve
