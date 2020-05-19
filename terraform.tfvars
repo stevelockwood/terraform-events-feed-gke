@@ -1,6 +1,6 @@
 # GCP Settings
-project_id   = "dtc-attendee230" # Enter your project ID here.
-container_registry = "gcr.io"
+project_id          = "dtc-attendee230" # Enter your project ID here.
+container_registry  = "gcr.io"
 external_image_name = "external-image:v1.0.0"
 internal_image_name = "internal-image:v1.0.0"
 

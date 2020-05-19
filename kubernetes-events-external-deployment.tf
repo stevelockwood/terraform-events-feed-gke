@@ -26,10 +26,10 @@ resource "kubernetes_deployment" "events-external-deployment" {
           image = "${var.container_registry}/${var.project_id}/${var.external_image_name}"
           name  = "events-external"
 
-        env {
+          env {
             name  = "SERVER"
             value = "http://events-internal-service:8082"
-        }
+          }
           port {
             container_port = 8080
           }

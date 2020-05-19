@@ -26,10 +26,10 @@ resource "kubernetes_deployment" "events-internal-deployment" {
           image = "${var.container_registry}/${var.project_id}/${var.internal_image_name}"
           name  = "events-internal"
 
-        env {
+          env {
             name  = "GOOGLE_CLOUD_PROJECT"
-            value = "${var.project_id}"
-        }
+            value = var.project_id
+          }
           port {
             container_port = 8082
           }
