@@ -4,7 +4,7 @@
 # Run this first
 terraform init
 
-terrafom plan
+terraform plan
 
 # Create everything
 terraform apply -auto-approve
