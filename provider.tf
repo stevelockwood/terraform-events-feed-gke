@@ -2,7 +2,18 @@
 
 terraform {
   required_version = ">= 0.12"
+  required_providers {
+    google = {
+      source  = "hashicorp/google"
+      version = "~> 3.53"
+    }
+    kubernetes = {
+      source  = "hashicorp/kubernetes"
+      version = "~> 2.0"
+    }
+  }
 }
+
 
 provider "google" {
   project = var.project_id

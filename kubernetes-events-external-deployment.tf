@@ -35,7 +35,7 @@ resource "kubernetes_deployment" "events-external-deployment" {
           }
 
           resources {
-            limits {
+            limits = {
               cpu    = "0.2"
               memory = "256Mi"
             }

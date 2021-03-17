@@ -17,5 +17,8 @@ resource "kubernetes_service" "events-external-service" {
 }
 
 output "lb_ip" {
-  value = kubernetes_service.events-external-service.load_balancer_ingress[0].ip
+  value = kubernetes_service.events-external-service.status.0.load_balancer.0.ingress.0.ip
+}
+output "lb_status" {
+  value = kubernetes_service.events-external-service.status
 }
