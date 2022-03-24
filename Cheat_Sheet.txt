@@ -9,5 +9,9 @@ terraform plan
 # Create everything
 terraform apply -auto-approve
 
-# Delete everything
+# Wait for the cluster to create and the application to deploy
+# Terraform will disply the IP of the events external service
+# Test the application by visiting the IP of the events external service in a browser.
+
+# When you are done with this lab, Delete everything terraform created with:
 terraform destroy -auto-approve
