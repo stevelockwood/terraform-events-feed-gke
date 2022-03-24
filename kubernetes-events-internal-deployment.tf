@@ -30,6 +30,10 @@ resource "kubernetes_deployment" "events-internal-deployment" {
             name  = "GOOGLE_CLOUD_PROJECT"
             value = var.project_id
           }
+          env {
+            name  = "PORT"
+            value = 8082
+          }
           port {
             container_port = 8082
           }
