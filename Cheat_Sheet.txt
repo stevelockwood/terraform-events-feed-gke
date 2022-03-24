@@ -1,17 +1,20 @@
-# Open terraform.tfvars file and change project_id variable
-# and the docker image names as needed
+# 1. Open terraform.tfvars file and change the project_id variable to your Google Project ID
+# and verify the docker image names match your image names you created earlier in the course
 
-# Run this first
+# 2. Run this command to initialize terraform
 terraform init
 
+# 3. Run this command to have terraform display a plan of what will happen when it runs
+# This command does not actually deploy anything
 terraform plan
 
-# Create everything
+# 4. Run this command to create everything
 terraform apply -auto-approve
 
-# Wait for the cluster to create and the application to deploy
-# Terraform will disply the IP of the events external service
-# Test the application by visiting the IP of the events external service in a browser.
+# 5. Wait for the cluster to create the Kubernetes cluster and deploy the application
+# Terraform will disply the IP of the events external service when done
 
-# When you are done with this lab, Delete everything terraform created with:
+# 6. Test the application by visiting the IP of the events external service in a browser.
+
+# 7. When you are done with this lab, Delete everything terraform created with:
 terraform destroy -auto-approve
